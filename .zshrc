@@ -15,6 +15,14 @@ c $1()
     v scraper.py
 }
 
+# Scraper
+s ()
+{
+    cd ~/Coding/Feeder/scrapy_farm_edu &&
+    docker run -p 8050:8050 scrapinghub/splash &&
+    scrapy crawl farm_edu_scraper
+}
+
 j ()
 {
         cd ~/Coding/personal_notes && v . 
